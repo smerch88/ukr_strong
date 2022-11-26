@@ -28,9 +28,26 @@
     font-size: 20px;
     line-height: calc(24 / 20) px;
 
-    color: #ffffff;
+    color: $header-white;
   }
 }
 
 .charity-items {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.charity-item {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+
+  background: rgba(132, 148, 100, 0.6);
+  border: 1px solid $header-white;
+  color: $header-white;
+  font-family: $heading-font;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: calc(24 / 20) px;
 }
