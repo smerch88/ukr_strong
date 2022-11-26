@@ -1,6 +1,10 @@
 .map {
   padding: 24px 8px;
   background-image: url(/src/images/map-bg.png);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+
   &__svg {
     fill: green;
   }
