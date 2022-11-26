@@ -18,3 +18,8 @@ const swiper = new Swiper(".mySwiper", {
     clickable: true,
   },
 });
+
+const regionButtonsRef = document.querySelectorAll(".swiper-slide");
+console.log(regionButtonsRef);
+
+regionButtonsRef.forEach((element) => console.log(element.dataset));
