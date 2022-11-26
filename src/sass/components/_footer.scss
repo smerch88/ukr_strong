@@ -1,0 +1,28 @@
+.footer {
+  background: $header-white;
+  opacity: 0.7;
+  padding: 12px 18px;
+
+  &__logo {
+    width: 96px;
+    height: 42px;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.support {
+  font-family: $heading-font;
+  background: $accent-color;
+  border-radius: 10px;
+  border: 0;
+  color: $header-white;
+  text-transform: uppercase;
+  padding: 12px 26px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+}
