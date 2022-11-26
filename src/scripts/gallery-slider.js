@@ -1,4 +1,4 @@
-var swiper = new Swiper(".mySwiper-gallery", {
+const swiperGallery = new Swiper(".mySwiper-gallery", {
   slidesPerView: 3,
   spaceBetween: 30,
   slidesPerGroup: 3,
