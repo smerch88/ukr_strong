@@ -8,7 +8,7 @@ import "swiper/modules/navigation/navigation.min.css";
 import "swiper/modules/pagination/pagination.min.css";
 
 const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 3,
+  slidesPerView: 4,
   grid: {
     rows: 2,
   },
