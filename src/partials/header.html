@@ -1,13 +1,24 @@
 <header class="header">
   <div class="container">
     <nav class="header__nav">
-      <div class="logo">
+      <div class="header__logo">
         <a href="index.html" class="logo-link"
           ><img src="./images/logo.png" alt=""
         /></a>
       </div>
-
-      <ul class="header__list">
+      <button
+        class="menu-toggle js-open-menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <svg width="24" height="16" aria-label="mobile menu">
+          <use
+            class="icon__menu"
+            href="./images/spryte.svg#icon-Vector-114"
+          ></use>
+        </svg>
+      </button>
+      <!-- <ul class="header__list">
         <li class="header__item">
           <a href="index.html" class="site-nav-link">про нас</a>
         </li>
@@ -17,7 +28,7 @@
         <li class="header__item">
           <button type="button" class="header__button">пiдтримати</button>
         </li>
-      </ul>
+      </ul> -->
     </nav>
   </div>
 </header>

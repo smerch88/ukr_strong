@@ -1,2 +1,9 @@
 .header {
+  background: $header-white;
+  padding: 12px 18px;
+
+  &__logo {
+    width: 96px;
+    height: 42px;
+  }
 }
