@@ -11,6 +11,16 @@ const regionButtonsRef = document.querySelectorAll(".swiper-slide");
 console.log(regionButtonsRef);
 const oblastRender = document.querySelector(".oblastJS");
 
+const renderOblast = (oblastId) => {
+  switch (oblastId) {
+    case 0:
+      console.log("drawing chernihiv");
+      break;
+    default:
+      console.log("drawing error", oblastId);
+  }
+};
+
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
   grid: {
@@ -24,9 +34,8 @@ const swiper = new Swiper(".mySwiper", {
   on: {
     click(event) {
       console.log("event.target", this.clickedIndex);
-      swiper.slideTo(this.clickedIndex);
+      const id = this.clickedIndex;
+      renderOblast(id);
     },
   },
 });
-
-const renderOblast = () => {};
