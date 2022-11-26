@@ -6,15 +6,19 @@
 }
 
 .swiper-slide {
+  font-family: $heading-font;
   text-align: center;
   font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.1;
   line-height: calc(18 / 15) px;
   color: $header-white;
 
   background: transparent;
   border: 1px solid $header-white;
   border-radius: 12px;
-  height: calc((100% - 30px) / 2) !important;
+  height: calc((100% - 30px) / 2);
+  padding: 6px 6px;
 
   /* Center slide text vertically */
   display: -webkit-box;

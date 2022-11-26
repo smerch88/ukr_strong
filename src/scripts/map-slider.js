@@ -8,11 +8,11 @@ import "swiper/modules/navigation/navigation.min.css";
 import "swiper/modules/pagination/pagination.min.css";
 
 const swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
+  slidesPerView: 3,
   grid: {
     rows: 2,
   },
-  spaceBetween: 30,
+  spaceBetween: 8,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
