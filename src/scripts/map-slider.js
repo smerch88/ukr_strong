@@ -73,19 +73,19 @@ const renderOblast = (oblastId) => {
     case 19:
       console.log("drawing Дніпро");
       break;
-    case 21:
+    case 20:
       console.log("drawing Запоріжжя");
       break;
-    case 22:
+    case 21:
       console.log("drawing Харків");
       break;
-    case 23:
+    case 22:
       console.log("drawing Донецьк");
       break;
-    case 24:
+    case 23:
       console.log("drawing Луганськ");
       break;
-    case 25:
+    case 24:
       console.log("drawing Київ");
       break;
     default:
