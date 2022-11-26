@@ -36,7 +36,35 @@
   text-transform: uppercase;
 
   &__list {
+    margin: 20px;
     display: grid;
-    columns: 2;
+    grid-template-columns: auto auto;
+  }
+
+  &__item:nth-child(-n + 2) {
+    padding-bottom: 36px;
+    border-bottom: 2px solid white;
+  }
+
+  &__item:nth-child(1) {
+    padding-top: 36px;
+  }
+
+  &__item:nth-child(n + 2) {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  &__item:nth-child(odd) {
+    padding-right: 33px;
+    border-right: 2px solid white;
+  }
+
+  &__item:nth-child(even) {
+    padding-left: 33px;
+  }
+
+  &__item span {
+    font-size: 40px;
   }
 }
