@@ -1,7 +1,8 @@
 // import Swiper JS
 import Swiper from "swiper";
 // import Swiper styles
-import "swiper/css";
+import "swiper/swiper.min.css";
+import "swiper/modules/pagination/pagination.min.css";
 
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
