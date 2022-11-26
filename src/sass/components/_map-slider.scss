@@ -7,8 +7,13 @@
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
-  background: #fff;
+  font-size: 15px;
+  line-height: calc(18 / 15) px;
+  color: $header-white;
+
+  background: transparent;
+  border: 1px solid $header-white;
+  border-radius: 12px;
   height: calc((100% - 30px) / 2) !important;
 
   /* Center slide text vertically */
