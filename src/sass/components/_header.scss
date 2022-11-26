@@ -6,4 +6,9 @@
     width: 96px;
     height: 42px;
   }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+  }
 }
