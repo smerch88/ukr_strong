@@ -5,8 +5,16 @@
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 
-  &__svg {
-    fill: green;
+  font-size: 15px;
+  line-height: calc(18 / 15);
+
+  &__more {
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $light-green;
+    text-align: center;
+    margin: 24px 0px 16px 0;
   }
 }
 
