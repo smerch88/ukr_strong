@@ -15,6 +15,9 @@ const renderOblast = (oblastId) => {
   switch (oblastId) {
     case 0:
       console.log("drawing Чернігів");
+      oblastRender.innerHTML = `<svg class="oblastSep" width="213px" height="226px"> 
+          <use href="/src/images/lutsk.svg"></use>
+        </svg>`;
       break;
     case 1:
       console.log("drawing Миколаїв");
