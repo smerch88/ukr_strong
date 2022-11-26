@@ -11,9 +11,23 @@
 }
 
 .oblast {
+  position: relative;
   display: flex;
   justify-content: center;
 
+  margin-bottom: 32px;
+
   &-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    font-family: $heading-font;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: calc(24 / 20) px;
+
+    color: #ffffff;
   }
 }
