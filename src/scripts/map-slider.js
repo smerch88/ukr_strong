@@ -102,13 +102,13 @@ const renderOblast = (oblastId) => {
 
 const swiper = new Swiper(".mySwiper", {
   slidesPerView: 3,
-  grid: {
-    rows: 2,
-  },
   spaceBetween: 8,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  autoplay: {
+    delay: 100,
   },
   on: {
     click(event) {

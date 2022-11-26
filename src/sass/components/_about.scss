@@ -1,0 +1,42 @@
+.about {
+  padding: 28px;
+  font-family: "Arial";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: calc(14 / 12);
+
+  color: #000000;
+
+  &__heading {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: calc(37 / 30);
+    margin-bottom: 12px;
+    text-align: center;
+
+    &--achievments {
+      margin: auto;
+      text-transform: uppercase;
+      width: 300px;
+      color: $header-white;
+    }
+  }
+}
+
+.achievments {
+  color: $header-white;
+  padding: 28px 0;
+  background: $accent-color;
+  font-family: "Bebas Neue";
+  font-size: 14px;
+  line-height: calc(48 / 40);
+  text-align: center;
+  text-transform: uppercase;
+
+  &__list {
+    display: grid;
+    columns: 2;
+  }
+}
