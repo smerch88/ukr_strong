@@ -1,7 +1,10 @@
 // import Swiper JS
-import Swiper from "swiper";
-// import Swiper styles
+// core version + navigation, pagination modules:
+import Swiper, { Navigation, Pagination } from "swiper";
+// import Swiper and modules styles
+
 import "swiper/swiper.min.css";
+import "swiper/modules/navigation/navigation.min.css";
 import "swiper/modules/pagination/pagination.min.css";
 
 const swiper = new Swiper(".mySwiper", {
