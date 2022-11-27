@@ -1,12 +1,3 @@
-// import Swiper JS
-// core version + navigation, pagination modules:
-import Swiper, { Navigation, Pagination } from "swiper";
-// import Swiper and modules styles
-
-import "swiper/swiper.min.css";
-import "swiper/modules/navigation/navigation.min.css";
-import "swiper/modules/pagination/pagination.min.css";
-
 const regionButtonsRef = document.querySelectorAll(".swiper-slide");
 console.log(regionButtonsRef);
 const oblastRender = document.querySelector(".oblastJS");
@@ -101,14 +92,17 @@ const renderOblast = (oblastId) => {
 };
 
 const swiper = new Swiper(".mySwiper", {
+  speed: 4000,
   slidesPerView: 3,
-  spaceBetween: 8,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+  grid: {
+    fill: "row",
+    rows: 2,
   },
+  spaceBetween: 8,
   autoplay: {
-    delay: 100,
+    delay: 1000,
+    // pauseOnMouseEnter: true,
+    waitForTransition: true,
   },
   on: {
     click(event) {
