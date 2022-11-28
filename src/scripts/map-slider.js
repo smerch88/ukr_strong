@@ -113,3 +113,19 @@ const swiper = new Swiper(".mySwiper", {
     },
   },
 });
+
+const swiperBubbles = new Swiper(".swiperBubbles", {
+  speed: 4000,
+  slidesPerView: "auto",
+  spaceBetween: 8,
+});
+
+const mySwiperGallery = new Swiper(".mySwiperGallery", {
+  speed: 4000,
+  grid: {
+    fill: "row",
+    rows: 2,
+  },
+  slidesPerView: "auto",
+  spaceBetween: 8,
+});

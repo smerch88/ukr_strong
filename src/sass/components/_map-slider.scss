@@ -5,7 +5,7 @@
   margin-right: auto;
 }
 
-.swiper-slide {
+.mySwiper .swiper-slide {
   font-family: $heading-font;
   text-align: center;
   font-size: 15px;
@@ -38,4 +38,8 @@
     background: $accent-color;
     border-color: $accent-color;
   }
+}
+
+.swiperBubbles {
+  margin-top: 12px;
 }
