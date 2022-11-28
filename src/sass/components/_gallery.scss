@@ -1,3 +1,11 @@
 .swiper-wrapper > img {
   object-fit: contain;
 }
+
+/* for Chrome and Safari */
+marquee {
+  overflow-x: -webkit-marquee;
+  -webkit-marquee-style: scroll;
+  -webkit-marquee-speed: slow;
+  animation: marquee 30s linear infinite;
+}
