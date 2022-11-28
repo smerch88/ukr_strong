@@ -1,4 +1,7 @@
 .header {
+  position: absolute;
+  scroll-behavior: fixed;
+  width: 100%;
   background: $header-white;
   opacity: 0.7;
   padding: 12px 18px;
