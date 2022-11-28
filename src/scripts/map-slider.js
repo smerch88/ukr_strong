@@ -122,10 +122,15 @@ const swiperBubbles = new Swiper(".swiperBubbles", {
 
 const mySwiperGallery = new Swiper(".mySwiperGallery", {
   speed: 4000,
+  slidesPerView: 3,
   grid: {
     fill: "row",
     rows: 2,
   },
-  slidesPerView: "auto",
   spaceBetween: 8,
+  autoplay: {
+    delay: 1000,
+    // pauseOnMouseEnter: true,
+    waitForTransition: true,
+  },
 });
