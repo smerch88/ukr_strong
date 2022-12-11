@@ -1,7 +1,7 @@
 "use srict";
 import { detailed } from "./items";
 
-let id = localStorage.getItem("id");
+let id = parseInt(localStorage.getItem("id"));
 console.log(id);
 
 const moreRef = document.querySelector(".map__more");
