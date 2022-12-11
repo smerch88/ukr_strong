@@ -1,13 +1,11 @@
 "use srict";
 import { detailed } from "./items";
 
-let id = parseInt(localStorage.getItem("id"));
-console.log(id);
-
 const moreRef = document.querySelector(".map__more");
 const modalOblastRef = document.querySelector(".modalOblastJS");
 
 const onClickOblastMobileModalHandler = (e) => {
+  let id = parseInt(localStorage.getItem("id"));
   let markup = `<button type='button' class="closeJS modal__oblast-button">X</button>`;
   const separatedMsgs = Object.values(detailed[id]);
 
