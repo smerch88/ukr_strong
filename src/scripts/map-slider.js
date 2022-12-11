@@ -1,3 +1,4 @@
+"use srict";
 const regionButtonsRef = document.querySelectorAll(".swiper-slide");
 console.log(regionButtonsRef);
 const oblastRender = document.querySelector(".oblastJS");
