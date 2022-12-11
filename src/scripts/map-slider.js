@@ -273,7 +273,7 @@ const swiper = new Swiper(".mySwiper", {
   on: {
     click(event) {
       console.log("event.target", this.clickedIndex);
-      id = parseInt(this.clickedIndex);
+      let id = parseInt(this.clickedIndex);
       renderOblast(id);
       ukraineMapRef.classList.add("hidden");
       renderBubbles(id);
