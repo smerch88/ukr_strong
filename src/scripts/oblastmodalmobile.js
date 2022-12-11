@@ -1,5 +1,8 @@
 import { detailed } from "./items";
 
+id = localStorage.getItem("id");
+console.log(id);
+
 const moreRef = document.querySelector(".map__more");
 const modalOblastRef = document.querySelector(".modalOblastJS");
 
