@@ -5,6 +5,7 @@ const ukraineMapRef = document.querySelector(".Ukraine");
 const charityRef = document.querySelector(".charityJS");
 const bubblesRef = document.querySelector(".charityWrapperJS");
 import { allItems } from "./items";
+let id = null;
 
 const renderOblast = (oblastId) => {
   switch (oblastId) {
