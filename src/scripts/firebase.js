@@ -1,14 +1,11 @@
 // Import the functions you need from the SDKs you need
 "use strict";
 import { initializeApp } from "firebase/app";
-import {
-  getFirestore,
-  collection,
-  getDocs,
-  addDoc,
-} from "firebase/firestore/lite";
+import { collection, getDocs, addDoc } from "firebase/firestore/lite";
 
 import { isAdmin } from "./addinfo";
+
+const formDivRef = document.querySelector(".formInput");
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -25,7 +22,6 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 
 const auth = getAuth(app);
 import { getAuth, signInWithPopup, GithubAuthProvider } from "firebase/auth";
@@ -50,6 +46,7 @@ function signIn() {
       if (user.uid === "KcXUsbUEOMMsDuD5LsyEDy2Sdk73") {
         alert("admin hello");
         let isAdmin = true;
+        formDivRef.classList.remove("hidden");
         console.log(isAdmin);
 
         //____________________________________________________________________//
@@ -61,20 +58,9 @@ function signIn() {
           if (isAdmin) {
             const indexOblast = event.currentTarget.chooseoblast.selectedIndex;
             console.log(indexOblast);
-            console.log(event.currentTarget);
-
-            try {
-              const docRef = addDoc(collection(db, "users"), {
-                first: "Alan",
-                middle: "Mathison",
-                last: "Turing",
-                born: 1912,
-              });
-
-              console.log("Document written with ID: ", docRef.id);
-            } catch (e) {
-              console.error("Error adding document: ", e);
-            }
+            let upperBubble = document.getElementById("upperBubble").value;
+            let lowerBubble = document.getElementById("lowerBubble").value;
+            console.log(upperBubble, lowerBubble);
           } else {
             console.log("not admin");
           }
@@ -111,19 +97,4 @@ async function postData(db) {
   } catch (e) {
     console.error("Error adding document: ", e);
   }
-}
-
-function onSignIn(googleUser) {
-  var profile = googleUser.getBasicProfile();
-  console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log("Name: " + profile.getName());
-  console.log("Image URL: " + profile.getImageUrl());
-  console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
-}
-
-function signOut() {
-  var auth2 = gapi.auth2.getAuthInstance();
-  auth2.signOut().then(function () {
-    console.log("User signed out.");
-  });
 }

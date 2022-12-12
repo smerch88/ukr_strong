@@ -273,6 +273,8 @@ const swiper = new Swiper(".mySwiper", {
   on: {
     click(event) {
       console.log("event.target", this.clickedIndex);
+      oblastRender.classList.remove("hidden");
+
       let id = parseInt(this.clickedIndex);
       renderOblast(id);
       ukraineMapRef.classList.add("hidden");
@@ -306,17 +308,15 @@ const mySwiperGallery = new Swiper(".mySwiperGallery", {
 console.log(allItems);
 
 const renderBubbles = (id) => {
-  const currentOblast = allItems[id];
-  const values = Object.values(currentOblast);
+  const currentOblast = allItems[parseInt(id)];
+
+  console.log("allItems[id]", allItems[id]);
+  console.log("currentOblast", currentOblast);
   let markup = "";
-  values.forEach((value) => {
-    const digit = parseInt(value);
-    const array = value.split("");
-    let stringValue = array.splice(digit.toString().length).join("");
-    markup += `
-      <div class="swiper-slide charity-item">
-        <span class="charity-item--bigger">${digit}</span><br/>${stringValue}
-      </div>`;
+  Object.values(currentOblast).forEach((value) => {
+    console.log(value[0]);
+    console.log(value[1]);
+    markup += `<div class="swiper-slide charity-item"><span class="charity-item--bigger">${value[0]}</span><br/>${value[1]}</div>`;
   });
 
   bubblesRef.innerHTML = markup;

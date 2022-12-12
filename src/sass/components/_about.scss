@@ -39,8 +39,12 @@
     margin: 20px;
     display: grid;
     grid-template-columns: auto auto;
+    justify-content: center;
   }
 
+  &__item {
+    width: 150px;
+  }
   &__item:nth-child(-n + 2) {
     padding-bottom: 36px;
     border-bottom: 2px solid white;
@@ -78,7 +82,7 @@
     height: 50px;
     transform: translate(-50%, -50%);
     background-color: $accent-color;
-    top: 50%;
+    top: 52%;
     left: 50%;
     z-index: 2;
   }

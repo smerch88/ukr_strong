@@ -1,8 +1,10 @@
 .modal__oblast {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) !important;
+  position: fixed;
+  top: 20px;
+
+  padding: 100px 20px 40px 20px;
+  max-height: calc(100% - 40px);
+  overflow-y: scroll;
   z-index: 2;
 
   font-style: $heading-font;
@@ -11,10 +13,12 @@
   line-height: 1;
   text-transform: uppercase;
 
-  width: 100%;
-  background-color: $body-white;
+  width: 80%;
+  background-color: $header-white;
   border-radius: 24px;
+
   padding: 24px 45px;
+  border: 24px solid $header-white;
 
   &-button {
     background-color: transparent;

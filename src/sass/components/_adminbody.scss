@@ -1,0 +1,66 @@
+.admin-body {
+  background-image: url(/src/images/map-bg.png);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  height: 100vh;
+}
+
+.header__nav--admin {
+  justify-content: center;
+}
+
+.admin-login-card {
+  background-color: $header-white;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+  padding: 15px 20px;
+}
+
+.admin-form {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(17 / 14);
+
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+
+  input {
+    font-weight: 500;
+    font-size: 9px;
+    line-height: 11px;
+
+    color: #696969;
+    padding: 10px;
+    width: 240px;
+    margin-bottom: 24px;
+    border: none;
+    border-bottom: 1px solid #000000;
+
+    &:last-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  span {
+  }
+
+  button {
+    border-radius: 24px;
+    padding: 12px 30px;
+    color: $header-white;
+    background-color: $accent-color;
+    border: none;
+
+    cursor: pointer;
+  }
+}
