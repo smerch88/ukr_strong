@@ -1,6 +1,13 @@
 // Import the functions you need from the SDKs you need
 "use strict";
 import { initializeApp } from "firebase/app";
+import {
+  getFirestore,
+  collection,
+  getDocs,
+  addDoc,
+} from "firebase/firestore/lite";
+
 import { isAdmin } from "./addinfo";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -18,6 +25,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 const auth = getAuth(app);
 import { getAuth, signInWithPopup, GithubAuthProvider } from "firebase/auth";
@@ -51,10 +59,22 @@ function signIn() {
         form.addEventListener("submit", (event) => {
           event.preventDefault();
           if (isAdmin) {
-            console.log(event.currentTarget.chooseoblast.selectedIndex);
             const indexOblast = event.currentTarget.chooseoblast.selectedIndex;
+            console.log(indexOblast);
             console.log(event.currentTarget);
-            console.log(event.currentTarget);
+
+            try {
+              const docRef = addDoc(collection(db, "users"), {
+                first: "Alan",
+                middle: "Mathison",
+                last: "Turing",
+                born: 1912,
+              });
+
+              console.log("Document written with ID: ", docRef.id);
+            } catch (e) {
+              console.error("Error adding document: ", e);
+            }
           } else {
             console.log("not admin");
           }
@@ -71,4 +91,39 @@ function signIn() {
       const credential = GithubAuthProvider.credentialFromError(error);
       // ...
     });
+}
+
+async function getCities(db) {
+  const citiesCol = collection(db, "cities");
+  const citySnapshot = await getDocs(citiesCol);
+  const cityList = citySnapshot.docs.map((doc) => doc.data());
+  return cityList;
+}
+
+async function postData(db) {
+  try {
+    const docRef = await addDoc(collection(db, "users"), {
+      first: "Ada",
+      last: "Lovelace",
+      born: 1815,
+    });
+    console.log("Document written with ID: ", docRef.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+}
+
+function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log("ID: " + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log("Name: " + profile.getName());
+  console.log("Image URL: " + profile.getImageUrl());
+  console.log("Email: " + profile.getEmail()); // This is null if the 'email' scope is not present.
+}
+
+function signOut() {
+  var auth2 = gapi.auth2.getAuthInstance();
+  auth2.signOut().then(function () {
+    console.log("User signed out.");
+  });
 }

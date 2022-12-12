@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сильна Нація</title>
+    <meta
+      name="google-signin-client_id"
+      content="87926584429-flhj4d9ipb85iphbg3cegc9dofiugov2.apps.googleusercontent.com"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,7 +23,8 @@
   </head>
   <body>
     <button type="button" class="loginJS">login GH</button>
-
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <a href="#" onclick="signOut();">Sign out</a>
     <include src="./partials/header.html"></include>
     <include src="./partials/map.html"></include>
     <include src="./partials/gallery.html"></include>
@@ -27,6 +32,7 @@
     <include src="./partials/footer.html"></include>
     <include src="./partials/inputinfo.html"></include>
 
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   </body>
 </html>
